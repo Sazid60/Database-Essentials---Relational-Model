@@ -1,6 +1,6 @@
 # Database Essentials & Relational Model
 
-## 5-1 Understanding Data,Information And Database
+## 5-1 Understanding Data,Information (Organized Data) And Database
 
 ### What is DBMS?
 

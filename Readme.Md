@@ -180,7 +180,7 @@
 
 - Attribute or set of attributes by which we can identify each row uniquely
 - Could be single attribute or set of attributes
-- Could have `null` values in the set
+- Could not have `null` values in the set
 - Its Actually a superset
 - u_id is a single attributed super key
 - u_id & name set of attributed super key (here name is not a super key as its not unique)
@@ -219,3 +219,17 @@
 
 - Candidate keys which are not chosen as primary key.
 - Alternate Keys : {name,gender}, {u_id} are candidate. Unique identifier are chosen for primary key so {u_id} is chosen and {name,gender} is chosen as primary key. Here {name,gender} is the alternate key as wll as it is a composite key.
+
+## 5-7 Exploring Foreign Keys
+
+- Order table should have connection with the Customer table to understand which customer has ordered which product.
+
+![alt text](<WhatsApp Image 2025-05-10 at 12.16.19_90cad34a.jpg>)
+
+- Here CustomerID is Primary Key Of Customer Table
+- Here OrderID is Primary Key Of Order Table
+
+![alt text](<WhatsApp Image 2025-05-10 at 15.22.47_ad4c98ba.jpg>)
+
+- Here CustomerId Is the foreign key of order table since despite being another tables primary key its placed in order table
+- If we create order we have to give customerID existing in The Customer Table and a connection/relation is built on the both table. This is called Referential Integrity. we can find which customer have ordered which product.

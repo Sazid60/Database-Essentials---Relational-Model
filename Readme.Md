@@ -305,3 +305,9 @@ Deployment
 - Relationship cardinality in database specifies how many instances(rows of a table) of one entity are associated with how many instances (rows of a table) of another entity.
 
 ![alt text](<WhatsApp Image 2025-05-10 at 22.43.26_6823cb36.jpg>)
+
+## 5-11 Tooling For ER Diagram And Crafting First Er Diagram
+
+![alt text](image.png)
+
+- Many to many relationship should be avoided since it creates complexity.

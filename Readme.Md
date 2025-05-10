@@ -126,3 +126,20 @@
 - How The relation is created and how the relation is handled its pre defined. There will be some predefined rules which we will maintain and command. This will make relation between two data. DBMS takes the command and do the operation accordingly our command.
 
 ![alt text](<WhatsApp Image 2025-05-10 at 10.20.01_a64077a7.jpg>)
+
+## 5-4 Anatomy Of a Table/Relation
+
+![alt text](<WhatsApp Image 2025-05-10 at 10.47.10_42f7fa73.jpg>)
+
+#### lets Breakdown The table
+
+- Tables are called relation
+- Before doing a project we have to define the entity first, like users can be one entity, the order they are placing this will be another entity. and the entities are represented by table.
+- First we have to give a table name. suppose the user data is stored in user table.
+- Columns of the table are called Column/Attribute. we can give a constrain/domain in the column, its like fixed domain data will be here like email column only the emails will be here.
+- Its like fixed domain data of birth will be here like date column only the dates will be here.
+- All The columns are called degree together (collection of columns)
+- If we start to put the data in a row and accordingly the column. all the data are called Row/Tuple/Record. All the Rows are together called Rows/Records/Tuples or `Cardinality`.
+- High Cardinality Means Many Rows and Low Cardinality Means Less Rows
+
+![alt text](<WhatsApp Image 2025-05-10 at 11.04.22_05be4085.jpg>)

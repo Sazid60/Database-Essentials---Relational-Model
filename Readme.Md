@@ -71,3 +71,58 @@
 | Relational | MySQL, PostGreSQL, SQLite, SQL Server |
 | Document   | MongoDB, DynamoDB                     |
 | Key Value  | Redis                                 |
+
+## 5-3 Different Type Of Database Model And Relational Model.
+
+- There were different models of database.
+  1. Hierarchical
+  2. Network
+  3. Relational
+  4. Document
+  5. Redis
+
+### Hierarchical Model
+
+- Hierarchical Model Used to Store data in Tree Structure.
+  ![alt text](<WhatsApp Image 2025-05-10 at 09.48.15_175fa626.jpg>)
+- If the data collection is vast it was difficult to visualize or finding data.
+- Each Node Might have multiple children but one children must have one parent not more not less. This is a drawback.
+
+### Network Model
+
+- The problem of the Hierarchical Model is solved here, here we could share children within two parent node.
+- ![alt text](<WhatsApp Image 2025-05-10 at 09.52.38_c176d720.jpg>)
+
+- Complexity
+
+  1. User had to navigate through a network of pointers to access or modify data,making it less intuitive than relational database.
+  2. If data is vast we have to pass a lot of pointers if we want to search.
+
+- Defining schema was very much
+
+  1. Defining schema in network model could be more complex than relational data model.
+  2. Schema Updating Was More complex as well.
+
+- Lack Of Standardization
+  1. There was no standardize Query Language.
+  2. Different system or software were used to do query.
+  3. Different Company Implemented Differently.
+
+### Relational Model
+
+- In Relational Model Data are stored separately
+- The Separation is Done Using Table.
+
+![alt text](<WhatsApp Image 2025-05-10 at 10.07.07_3147a00b.jpg>)
+
+- First one Was Physical Entity and Second One was Hypothetical/Logical Entity.
+- Using the Unique Key "u_id" or "o_id" we can identify a row.
+- If there was no Unique Identifier we could not separate the duplicate data
+- In Relational Database Linking data was done using unique Identifier.
+
+![alt text](<WhatsApp Image 2025-05-10 at 10.14.19_3f4b7310.jpg>)
+
+- u_id added in the product table, this helps to find out whose product is it. this type of referring key is named as foreign key.
+- How The relation is created and how the relation is handled its pre defined. There will be some predefined rules which we will maintain and command. This will make relation between two data. DBMS takes the command and do the operation accordingly our command.
+
+![alt text](<WhatsApp Image 2025-05-10 at 10.20.01_a64077a7.jpg>)

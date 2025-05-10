@@ -265,3 +265,27 @@ Deployment
 - In real world We use Hybrid Method (mix of Top Down and Bottom Up)
 
 ![alt text](<WhatsApp Image 2025-05-10 at 16.12.26_e7792338.jpg>)
+
+## 5-9 Steps Of Top Down Techniques
+
+![alt text](<WhatsApp Image 2025-05-10 at 16.20.26_3e387399.jpg>)
+
+- An Entity-Relationship diagram is visual representation used in database design to illustrate the relationship between entities. It Shows how different entities in a database related to each other through various types of relationship like one-to-one, one-to-many or many to many.
+
+### What are required for ER diagram
+
+##### In Top Down Approach
+
+1. Entity
+
+![alt text](<WhatsApp Image 2025-05-10 at 16.32.40_2d9a11af.jpg>)
+
+- Here Student,Course,Instructor is Entity
+
+1. Determine attributes for each entity
+   i. Should be related to the entity
+   ii. Should be atomic. address is not atomic since address can contain city country and many. We should take small attributed data.
+   iii. Should have keys (unique keys)
+   ![alt text](<WhatsApp Image 2025-05-10 at 22.23.25_98071ff3.jpg>)
+
+2. Building Relationship

@@ -289,3 +289,19 @@ Deployment
    ![alt text](<WhatsApp Image 2025-05-10 at 22.23.25_98071ff3.jpg>)
 
 2. Building Relationship
+
+## 5-10 Relationship and Relationship Cardinality
+
+- This cardinality is not the collection of rows. It means connection between entity and table.
+- Ex: Instructor **Teaches** Student. Here teaches is relationship
+
+![alt text](<WhatsApp Image 2025-05-10 at 22.32.37_957c2a3d.jpg>)
+
+- We do not do the diagram in practical since it do not give proper visualization.
+- In This Point Cardinality Comes.
+
+#### What is Cardinality?
+
+- Relationship cardinality in database specifies how many instances(rows of a table) of one entity are associated with how many instances (rows of a table) of another entity.
+
+![alt text](<WhatsApp Image 2025-05-10 at 22.43.26_6823cb36.jpg>)

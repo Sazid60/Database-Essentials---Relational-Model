@@ -126,3 +126,110 @@
 - How The relation is created and how the relation is handled its pre defined. There will be some predefined rules which we will maintain and command. This will make relation between two data. DBMS takes the command and do the operation accordingly our command.
 
 ![alt text](<WhatsApp Image 2025-05-10 at 10.20.01_a64077a7.jpg>)
+
+## 5-4 Anatomy Of a Table/Relation
+
+![alt text](<WhatsApp Image 2025-05-10 at 10.47.10_42f7fa73.jpg>)
+
+#### lets Breakdown The table
+
+- Tables are called relation
+- Before doing a project we have to define the entity first, like users can be one entity, the order they are placing this will be another entity. and the entities are represented by table.
+- First we have to give a table name. suppose the user data is stored in user table.
+- Columns of the table are called Column/Attribute. we can give a constrain/domain in the column, its like fixed domain data will be here like email column only the emails will be here.
+- Its like fixed domain data of birth will be here like date column only the dates will be here.
+- All The columns are called Degree together (collection of columns)
+- If we start to put the data in a row and accordingly the column. all the data are called Row/Tuple/Record. All the Rows are together called Rows/Records/Tuples or `Cardinality`.
+- High Cardinality Means Many Rows and Low Cardinality Means Less Rows
+
+![alt text](<WhatsApp Image 2025-05-10 at 11.04.22_05be4085.jpg>)
+
+## 5-5 What is Key and Super Key?
+
+- Suppose we have a table
+  ![alt text](<WhatsApp Image 2025-05-10 at 12.04.48_3f999c07.jpg>)
+
+- In This Table we have 5 columns that means we have 5 attributes.
+- We have 6 rows that means we have 6 Tuples/rows/records
+
+##### Suppose we have to find Payel From the table and reduce her age by 5.
+
+- What will the database do? I will search "Payel" By name and reduce her name.
+- Whats the problem here right? The problem is Payel named person can be more than one. All the Payel named persons age will be reduced. The names can be common. we can identify Payel using the person's name and Payel Female. We are not able to find the data uniquely.
+
+- This is why we need a unique key. Using the unique Key the person having the key "3" reduce her age.
+
+##### What is Key?
+
+- A Key in a relational Database is a field or a combination of fields that uniquely identifies record ina table.
+- One Unique key can be u_id=3
+- Combination of key can be like name="payel" & email="payel@gmail.com"
+
+#### What are the type of key?
+
+1. Super Key
+2. Candidate Key
+3. Alternate Key
+4. Composite Key
+5. Foreign Key
+6. Primary Key
+
+![alt text](<WhatsApp Image 2025-05-10 at 12.16.19_2a312aeb.jpg>)
+
+#### Super Key
+
+- Attribute or set of attributes by which we can identify each row uniquely
+- Could be single attribute or set of attributes
+- Could not have `null` values in the set
+- Its Actually a superset
+- u_id is a single attributed super key
+- u_id & name set of attributed super key (here name is not a super key as its not unique)
+- One table may have multiple superkey. Like email is also a unique, U_id is unioque. Email will be a superkey if its not null.
+- Like Roll Number 5-Sazid Stand up.
+- some super key for this table are {u_id},{u_id,name},{u_id,email},{u_id,name,email,gender,age}, {name,email}, {name,gender}
+
+## 5-6 Candidate,Primary,Alternate & Composite Key
+
+#### Candidate Key
+
+- Super key whose proper subset key is not a super key. Suppose we have a set named X which contains A,B,C and another set is Y and which contains B,C. so here, Y set is subset of X set since Y set contains B,C as well A set Contains BC. the Y set contains something X do not have then Y will never be subset of Y. So what is proper subset? If the Y contains minimum one element less then the X set this is called proper subset. As like X set contains A,B,C but Y set will not contain all A,B,C . It should be like Y will contain A,B or B,C or C,A then its a proper subset. In case of the table take u_id,name,email and make a set then {u_id} will be a subset, {name} will be a subset, {email} will be a subset, and {u_id,name} will be a subset, {u_id,email} will be a subset as well. these are also proper subset. If we create a subset where {u_id,name,email} all are available in the set this will not be a proper subset. Those who are proper subset and is not a unique key (suer key) they are called super key.
+- Also called minimal key
+- Potential Primary Key : From the candidate keys, one is chosen as the primary key. However all candidate keys are potential choices for the primary key.
+- In candidate key is lowest number of attributes are present so this is chosen to be selected primary key
+
+- Candidate keys & super key :
+  1. {u_id} is a candidate key since after breaking this we will not get any super key
+  2. {u_id,name} is not a candidate key since after breaking this we will get {u_id} which is a super key.
+  3. {u_id,name,email,gender,age} is not a candidate key since after breaking this we will get a bunch of super keys.
+  4. {name,email} is a candidate key since after breaking this we will not get any super key. If we make the email can not be null and it should be unique then it will be a super key not a candidate key.
+  5. {name,gender} is a candidate key since after breaking this we will not get any super key but these both are combining and making a unique key which is combined super key.
+
+#### Primary Key
+
+- From the candidate keys, one key is chosen as the primary key for the table, The Primary Key is a specific candidate key that is selected as the main identifier for the records in the table. For searching we will use primary key to find the data row.
+- Should be unique(not duplicate) not null and stable(not a field that changes frequently).
+- Primary Keys : {name,gender}, {u_id} are candidate. Unique identifier are chosen for primary key so {u_id} is chosen and {name,gender} is not chosen as primary key since two attribute handling is tough. Admins do the choosing.
+
+#### Alternate key
+
+- Candidate Keys whose were not chosen as candidate keys
+- Alternate Keys : {name,gender}, {u_id} are candidate. Unique identifier are chosen for primary key so {u_id} is chosen and {name,gender} is chosen as primary key. Here {name,gender} is the alternate key.
+
+#### Composite Key
+
+- Candidate keys which are not chosen as primary key.
+- Alternate Keys : {name,gender}, {u_id} are candidate. Unique identifier are chosen for primary key so {u_id} is chosen and {name,gender} is chosen as primary key. Here {name,gender} is the alternate key as wll as it is a composite key.
+
+## 5-7 Exploring Foreign Keys
+
+- Order table should have connection with the Customer table to understand which customer has ordered which product.
+
+![alt text](<WhatsApp Image 2025-05-10 at 12.16.19_90cad34a.jpg>)
+
+- Here CustomerID is Primary Key Of Customer Table
+- Here OrderID is Primary Key Of Order Table
+
+![alt text](<WhatsApp Image 2025-05-10 at 15.22.47_ad4c98ba.jpg>)
+
+- Here CustomerId Is the foreign key of order table since despite being another tables primary key its placed in order table
+- If we create order we have to give customerID existing in The Customer Table and a connection/relation is built on the both table. This is called Referential Integrity. we can find which customer have ordered which product.

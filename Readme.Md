@@ -138,8 +138,52 @@
 - First we have to give a table name. suppose the user data is stored in user table.
 - Columns of the table are called Column/Attribute. we can give a constrain/domain in the column, its like fixed domain data will be here like email column only the emails will be here.
 - Its like fixed domain data of birth will be here like date column only the dates will be here.
-- All The columns are called degree together (collection of columns)
+- All The columns are called Degree together (collection of columns)
 - If we start to put the data in a row and accordingly the column. all the data are called Row/Tuple/Record. All the Rows are together called Rows/Records/Tuples or `Cardinality`.
 - High Cardinality Means Many Rows and Low Cardinality Means Less Rows
 
 ![alt text](<WhatsApp Image 2025-05-10 at 11.04.22_05be4085.jpg>)
+
+## 5-5 What is Key and Super Key?
+
+- Suppose we have a table
+  ![alt text](<WhatsApp Image 2025-05-10 at 12.04.48_3f999c07.jpg>)
+
+- In This Table we have 5 columns that means we have 5 attributes.
+- We have 6 rows that means we have 6 Tuples/rows/records
+
+##### Suppose we have to find Payel From the table and reduce her age by 5.
+
+- What will the database do? I will search "Payel" By name and reduce her name.
+- Whats the problem here right? The problem is Payel named person can be more than one. All the Payel named persons age will be reduced. The names can be common. we can identify Payel using the person's name and Payel Female. We are not able to find the data uniquely.
+
+- This is why we need a unique key. Using the unique Key the person having the key "3" reduce her age.
+
+##### What is Key?
+
+- A Key in a relational Database is a field or a combination of fields that uniquely identifies record ina table.
+- One Unique key can be u_id=3
+- Combination of key can be like name="payel" & email="payel@gmail.com"
+
+#### What are the type of key?
+
+1. Super Key
+2. Candidate Key
+3. Alternate Key
+4. Composite Key
+5. Foreign Key
+6. Primary Key
+
+![alt text](<WhatsApp Image 2025-05-10 at 12.16.19_2a312aeb.jpg>)
+
+#### Super Key
+
+- Attribute or set of attributes by which we can identify each row uniquely
+- Could be single attribute or set of attributes
+- Could have `null` values in the set
+- Its Actually a superset
+- u_id is a single attributed super key
+- u_id & name set of attributed super key (here name is not a super key as its not unique)
+- One table may have multiple superkey. Like email is also a unique, U_id is unioque. Email will be a superkey if its not null.
+- Like Roll Number 5-Sazid Stand up.
+- some super key for this table are {u_id},{u_id,name},{u_id,email},{u_id,name,email,gender,age}, {name,email}, {name,gender}

@@ -233,3 +233,35 @@
 
 - Here CustomerId Is the foreign key of order table since despite being another tables primary key its placed in order table
 - If we create order we have to give customerID existing in The Customer Table and a connection/relation is built on the both table. This is called Referential Integrity. we can find which customer have ordered which product.
+
+## 5-8 Techniques to Design Database
+
+### Database Design
+
+#### Lets Discuss About The SDLC
+
+Planning
+|
+Requirement Analysis
+|
+System Design(UI/UX, DATABASE DESIGN, APP DESIGN)
+|
+Building
+|
+Testing
+|
+Deployment
+
+- These steps changes in different methodology. Such as in Agile Methodology is different, in water fall model its different as well.
+
+#### What is the purpose of designing a database?
+
+- Structured organization for efficient data management and retrieval
+
+#### Database Design Techniques
+
+- Top-Down Techniques (Means designing database from 0)
+- Bottom Up (Like I have Existing System and I want Migrate to another system)
+- In real world We use Hybrid Method (mix of Top Down and Bottom Up)
+
+![alt text](<WhatsApp Image 2025-05-10 at 16.12.26_e7792338.jpg>)

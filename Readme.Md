@@ -187,3 +187,35 @@
 - One table may have multiple superkey. Like email is also a unique, U_id is unioque. Email will be a superkey if its not null.
 - Like Roll Number 5-Sazid Stand up.
 - some super key for this table are {u_id},{u_id,name},{u_id,email},{u_id,name,email,gender,age}, {name,email}, {name,gender}
+
+## 5-6 Candidate,Primary,Alternate & Composite Key
+
+#### Candidate Key
+
+- Super key whose proper subset key is not a super key. Suppose we have a set named X which contains A,B,C and another set is Y and which contains B,C. so here, Y set is subset of X set since Y set contains B,C as well A set Contains BC. the Y set contains something X do not have then Y will never be subset of Y. So what is proper subset? If the Y contains minimum one element less then the X set this is called proper subset. As like X set contains A,B,C but Y set will not contain all A,B,C . It should be like Y will contain A,B or B,C or C,A then its a proper subset. In case of the table take u_id,name,email and make a set then {u_id} will be a subset, {name} will be a subset, {email} will be a subset, and {u_id,name} will be a subset, {u_id,email} will be a subset as well. these are also proper subset. If we create a subset where {u_id,name,email} all are available in the set this will not be a proper subset. Those who are proper subset and is not a unique key (suer key) they are called super key.
+- Also called minimal key
+- Potential Primary Key : From the candidate keys, one is chosen as the primary key. However all candidate keys are potential choices for the primary key.
+- In candidate key is lowest number of attributes are present so this is chosen to be selected primary key
+
+- Candidate keys & super key :
+  1. {u_id} is a candidate key since after breaking this we will not get any super key
+  2. {u_id,name} is not a candidate key since after breaking this we will get {u_id} which is a super key.
+  3. {u_id,name,email,gender,age} is not a candidate key since after breaking this we will get a bunch of super keys.
+  4. {name,email} is a candidate key since after breaking this we will not get any super key. If we make the email can not be null and it should be unique then it will be a super key not a candidate key.
+  5. {name,gender} is a candidate key since after breaking this we will not get any super key but these both are combining and making a unique key which is combined super key.
+
+#### Primary Key
+
+- From the candidate keys, one key is chosen as the primary key for the table, The Primary Key is a specific candidate key that is selected as the main identifier for the records in the table. For searching we will use primary key to find the data row.
+- Should be unique(not duplicate) not null and stable(not a field that changes frequently).
+- Primary Keys : {name,gender}, {u_id} are candidate. Unique identifier are chosen for primary key so {u_id} is chosen and {name,gender} is not chosen as primary key since two attribute handling is tough. Admins do the choosing.
+
+#### Alternate key
+
+- Candidate Keys whose were not chosen as candidate keys
+- Alternate Keys : {name,gender}, {u_id} are candidate. Unique identifier are chosen for primary key so {u_id} is chosen and {name,gender} is chosen as primary key. Here {name,gender} is the alternate key.
+
+#### Composite Key
+
+- Candidate keys which are not chosen as primary key.
+- Alternate Keys : {name,gender}, {u_id} are candidate. Unique identifier are chosen for primary key so {u_id} is chosen and {name,gender} is chosen as primary key. Here {name,gender} is the alternate key as wll as it is a composite key.
